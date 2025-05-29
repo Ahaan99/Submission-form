@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --background-color: #FDB813;
+            --text-color: #333;
+            --input-bg: #f8f9fa;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--background-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .page-container {
+            display: flex;
+            width: 1000px;
+            height: 600px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow-color);
+        }
+
+        .illustration-section {
+            flex: 1;
+            background: var(--background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .illustration-section img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .result-section {
+            flex: 1;
+            width: 500px;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .result-content {
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .heading-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .heading-container i {
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .result-item {
+            background: var(--input-bg);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--background-color);
+        }
+
+        .back-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--text-color);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        @media (max-width: 1024px) {
+            .page-container {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                flex-direction: column;
+            }
+
+            .illustration-section {
+                display: none;
+            }
+
+            .result-section {
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="illustration-section">
+            <img src="/images/image.jpg" alt="Thank you illustration" 
+                 onerror="this.src='https://via.placeholder.com/500x400/FDB813/333333?text=Thank+You'">
+        </div>
+        <div class="result-section">
+            <div class="result-content">
+                <div class="heading-container">
+                    <i class="fas fa-check-circle"></i>
+                    <h1>Thank You!</h1>
+                </div>
+                
+                <div class="result-item">
+                    <strong>Name:</strong> <%= name %>
+                </div>
+                <div class="result-item">
+                    <strong>Email:</strong> <%= email %>
+                </div>
+                <div class="result-item">
+                    <strong>Message:</strong> <%= message %>
+                </div>
+
+                <a href="/" class="back-button">Back to Form</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
