@@ -61,6 +61,6 @@ Sure! Below are the step-by-step commands and instructions to set up and run you
    node server.js
    
 
-10. Open your web browser and navigate to http://localhost:4000 to see the form. Fill out the form and submit it to see the styled result page.
+10. Open your web browser and navigate to http://localhost: to see the form. Fill out the form and submit it to see the styled result page.
 
 Following these steps will set up and run your project successfully.
